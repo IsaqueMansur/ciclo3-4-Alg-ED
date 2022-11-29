@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdio.h>
 
-void insertionSort(int arr[], int size){ //funcao que imprime o resultado
+void insertionSort(int arr[], int size){ //funcao sequenciadora
     int i, j, key; //contadores
     for (i = 1; i < size; i++) { //laço de repetição de acordo com o tamanho do array
         key = arr[i]; //numero atual dentro do array (KEY)
