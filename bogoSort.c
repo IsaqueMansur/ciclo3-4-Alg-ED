@@ -30,10 +30,18 @@ void bogosort(int *a, int n) //função bogoSort
  
 int main() //funcao principal
 {
-  int numbers[] = { 1, 10, 9,  7, 3, 0 }; //array de números a ser ordenado
+  printf("Gerador de tokens para APIs \n");
+  system("read -p 'Pressione Enter para gerar os tokens em ordem crescente...' var");
+  int numbers[4]; //quantidade de tokens a serem gerados (array);
+  char *propsApi[10] = {"API_1", "API_2", "API_3", "API_4"};
+  int o;
+  for (o = 0; o < 4; o++) { //laço para gerar tokens
+  int randomNumber = random();
+      numbers[o] = randomNumber;
+  }
+  
   int i; //contador
- 
-  bogosort(numbers, 6); //chamando a funcao bogoSort
-  for (i=0; i < 6; i++) printf("%d ", numbers[i]); // impressão dos números pós sequencia-los
-  printf("\n"); //impressao de espaõ
+  bogosort(numbers, 4); //chamando a funcao bogoSort
+  for (i=0; i < 4; i++) printf("\ntoken %d: %s_%d%d", i+1,propsApi[i], i, numbers[i]); // impressão dos números pós sequencia-los
+  printf("\n"); //impressao de espaço
 }
